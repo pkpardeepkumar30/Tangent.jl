@@ -13,4 +13,18 @@ function approx_derivative(f, x; ϵ = 1e-16)
     return f′
 end
 
-export approx_derivative
+"""
+tangent(f, x₀; ϵ=1e-2)
+
+Return the tangent of a function ``f(x)`` at ``x``  
+## Examples
+``f'(x_0) \\approx \\frac{f(x_0 + ϵ) - f(x)}{ϵ}
+julia > f()
+``  
+"""
+function tangent(f, x₀; ϵ=1e-2)
+    slope = approx_derivative(f, x₀; ϵ)
+    r(x) = slope * (x - x₀) + f(x₀)
+end
+
+export approx_derivative, tangent
