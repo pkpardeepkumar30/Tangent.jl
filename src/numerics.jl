@@ -18,7 +18,7 @@ function approx_derivative(f, x; ϵ = 1e-16)
 end
 
 """
-tangent(f, x₀; ϵ=1e-2)
+    tangent(f, x₀; ϵ=1e-2)
 
 Return the tangent of a function ``f(x)`` at ``x``  
 ## Examples
