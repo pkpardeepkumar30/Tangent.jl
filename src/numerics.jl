@@ -4,9 +4,9 @@
 
 Return the derivateive of a function ``f(x)`` at ``x``  
 ## Examples
-``f'(x_0) \\approx \\frac{f(x_0 + ϵ) - f(x)}{ϵ}
+``f'(x_0) \\approx \\frac{f(x_0 + ϵ) - f(x)}{ϵ}\\\``
 julia > f()
-``  
+
 """
 function approx_derivative(f, x; ϵ = 1e-16)
     f′ =  (f(x + ϵ) - f(x))/ϵ
@@ -18,9 +18,8 @@ tangent(f, x₀; ϵ=1e-2)
 
 Return the tangent of a function ``f(x)`` at ``x``  
 ## Examples
-``f'(x_0) \\approx \\frac{f(x_0 + ϵ) - f(x)}{ϵ}
+``f'(x_0) \\approx \\frac{f(x_0 + ϵ) - f(x)}{ϵ}\\\``
 julia > f()
-``  
 """
 function tangent(f, x₀; ϵ=1e-2)
     slope = approx_derivative(f, x₀; ϵ)
